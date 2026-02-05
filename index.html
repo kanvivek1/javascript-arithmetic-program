@@ -1,42 +1,27 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Arithmetic Operations using Switch Case</title>
-</head>
-<body>
-    <h2>Simple Calculator</h2>
+let a = 2;
+let b = 2;
+let op = '+';
 
-    <script>
-        // Enter numbers and operator directly in code
-        let num1 = 20;   // change this number
-        let num2 = 4;    // change this number
-        let operator = '*';  // change operator (+, -, *, /, %)
+let result;
 
-        let result;
+switch (op) {
+    case '+':
+        result = a + b;
+        break;
+    case '-':
+        result = a - b;
+        break;
+    case '*':
+        result = a * b;
+        break;
+    case '/':
+        result = b !== 0 ? a / b : "Error! Division by zero.";
+        break;
+    case '%':
+        result = a % b;
+        break;
+    default:
+        result = "Invalid operator!";
+}
 
-        // Switch case for arithmetic operations
-        switch (operator) {
-            case '+':
-                result = num1 + num2;
-                break;
-            case '-':
-                result = num1 - num2;
-                break;
-            case '*':
-                result = num1 * num2;
-                break;
-            case '/':
-                result = num2 !== 0 ? num1 / num2 : "Error! Division by zero.";
-                break;
-            case '%':
-                result = num1 % num2;
-                break;
-            default:
-                result = "Invalid operator!";
-        }
-
-        // Show result on the page
-        document.write("<h3>Result: " + result + "</h3>");
-    </script>
-</body>
-</html>
+console.log("Result: " + result);
