@@ -1,27 +1,39 @@
-let a = 2;
-let b = 2;
-let op = '+';
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Arithmetic Switch Case</title>
+</head>
+<body>
+    <h2>Simple JavaScript Program</h2>
 
-let result;
+    <script>
+        let a = 10;   // first number
+        let b = 5;    // second number
+        let op = '*'; // operator (+, -, *, /, %)
 
-switch (op) {
-    case '+':
-        result = a + b;
-        break;
-    case '-':
-        result = a - b;
-        break;
-    case '*':
-        result = a * b;
-        break;
-    case '/':
-        result = b !== 0 ? a / b : "Error! Division by zero.";
-        break;
-    case '%':
-        result = a % b;
-        break;
-    default:
-        result = "Invalid operator!";
-}
+        let result;
 
-console.log("Result: " + result);
+        switch (op) {
+            case '+':
+                result = a + b;
+                break;
+            case '-':
+                result = a - b;
+                break;
+            case '*':
+                result = a * b;
+                break;
+            case '/':
+                result = b !== 0 ? a / b : "Error! Division by zero.";
+                break;
+            case '%':
+                result = a % b;
+                break;
+            default:
+                result = "Invalid operator!";
+        }
+
+        document.write("Result: " + result);
+    </script>
+</body>
+</html>
